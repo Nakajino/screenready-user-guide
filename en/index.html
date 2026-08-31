@@ -1,5 +1,5 @@
-<title>ScreenReady 取説</title>
-<meta name="description" content="ScreenReadyの使い方を初心者向けにやさしく説明するガイドです。">
+<title>ScreenReady Guide</title>
+<meta name="description" content="A friendly guide to using ScreenReady.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
@@ -429,144 +429,144 @@
     </div>
     <div>
       <span class="kicker">SCREENREADY GUIDE</span>
-      <h1>取扱説明書</h1>
+      <h1>User Guide</h1>
     </div>
-    <span class="version-chip">対象バージョン 0.2.2</span>
-    <a class="version-chip" href="en/" style="text-decoration:none;">English</a>
+    <span class="version-chip">Version 0.2.2</span>
+    <a class="version-chip" href=".." style="text-decoration:none;">日本語</a>
   </header>
 
   <div class="intro">
     <p>
-      パソコンの画面を撮って、見せたくない部分を隠したり、丸や矢印で説明を書き足したり、
-      画像の中の文字を読み取ってコピーしたりできるアプリです。
+      ScreenReady lets you capture your screen, hide parts you don't want to show, add circles and
+      arrows to point things out, and turn text in an image into text you can copy.
     </p>
 
     <div class="privacy-note">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
       <div>
-        <strong>撮った画像はパソコンの外に出ません</strong>
-        <p>撮影した画像や読み取った文字は、すべてこのパソコンの中だけで処理されます。インターネットには一切送信されません。安心して使ってください。</p>
+        <strong>Your captures never leave this PC</strong>
+        <p>Captured images and recognized text are processed entirely on this computer and are never sent over the internet. You can use it with confidence.</p>
       </div>
     </div>
   </div>
 
   <div class="layout">
-    <nav class="toc" aria-label="もくじ">
-      <a href="#s1">1. 「範囲指定」と「全画面」について</a>
-      <a href="#s2">2. マークアップについて</a>
-      <a href="#s3">3. トリミングについて</a>
-      <a href="#s4">4. テキスト化について</a>
-      <a href="#s5">5. テキスト化(マスク)</a>
-      <a href="#s6">6. 保存・コピーについて</a>
-      <a href="#s7">7. 履歴について</a>
-      <a href="#s8">8. 設定について</a>
-      <a href="#s9">9. よくある質問(FAQ)</a>
+    <nav class="toc" aria-label="Table of contents">
+      <a href="#s1">1. Select Area and All Displays</a>
+      <a href="#s2">2. Markup</a>
+      <a href="#s3">3. Crop</a>
+      <a href="#s4">4. Scan Text</a>
+      <a href="#s5">5. Scan Text (Mask)</a>
+      <a href="#s6">6. Saving and Copying</a>
+      <a href="#s7">7. History</a>
+      <a href="#s8">8. Settings</a>
+      <a href="#s9">9. FAQ</a>
     </nav>
 
     <main>
 
       <section class="step" id="s1">
-        <div class="step-head"><span class="step-num">1</span><h2>「範囲指定」と「全画面」について</h2></div>
-        <p>アプリを開くと、右上に2つの撮影ボタンがあります。</p>
+        <div class="step-head"><span class="step-num">1</span><h2>Select Area and All Displays</h2></div>
+        <p>When you open the app, there are two capture buttons in the top right.</p>
         <ul>
-          <li><strong>範囲指定</strong> — 自分でドラッグ(マウスを押したまま動かす)して選んだ部分だけを撮ります。「ここだけ撮りたい」という時に使います。</li>
-          <li><strong>全画面</strong> — 画面全体をそのまま撮ります。複数のモニターを使っている場合は、すべてのモニターをまとめて撮ります。</li>
+          <li><strong>Select Area</strong> — Drag (press and hold the mouse button while moving it) to capture only the part you chose. Use this when you only want a specific part of the screen.</li>
+          <li><strong>All Displays</strong> — Captures the entire screen as-is. If you use multiple monitors, all of them are captured together.</li>
         </ul>
-        <p>ボタンの代わりに、キーボードのショートカットも使えます。</p>
+        <p>Instead of the buttons, you can also use keyboard shortcuts.</p>
         <div class="shortcut-row">
-          <span class="shortcut-chip"><span class="label">範囲指定</span><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd></span>
-          <span class="shortcut-chip"><span class="label">全画面</span><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></span>
+          <span class="shortcut-chip"><span class="label">Select Area</span><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd></span>
+          <span class="shortcut-chip"><span class="label">All Displays</span><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></span>
         </div>
-        <p>撮り終わると、自動で真ん中のプレビュー(撮った画像を確認する場所)に表示されます。</p>
+        <p>Once captured, the image automatically appears in the preview in the middle of the screen.</p>
         <div class="callout">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><circle cx="12" cy="16" r="0.5" fill="currentColor"></circle></svg>
-          <span><strong>撮ってすぐコピーだけしたい時は</strong> — 右上の「簡易モード」を使うと、編集画面を経由せず、常に最前面に出る小さいパネルからワンクリックで撮影・コピーでき、フォルダを指定すれば自動保存もできます。</span>
+          <span><strong>If you just want to capture and copy right away</strong> — use "Quick Mode" in the top right. It skips the editing screen and lets you capture and copy with one click from a small always-on-top panel, with optional auto-save to a folder you choose.</span>
         </div>
       </section>
 
       <section class="step" id="s2">
-        <div class="step-head"><span class="step-num">2</span><h2>マークアップについて</h2></div>
-        <p>「ここに注目してほしい」「ここが間違っている」といったことを伝えたい時に使います。「マークアップ」タブを開いて使います。</p>
+        <div class="step-head"><span class="step-num">2</span><h2>Markup</h2></div>
+        <p>Use this when you want to point something out or note a mistake. Open the "Markup" tab to use it.</p>
         <ul class="tool-grid">
-          <li><span class="tool-name">四角形・丸・矢印・線</span>ボタンを押してから、画像の上でドラッグすると描けます。</li>
-          <li><span class="tool-name">文字</span>ボタンを押し、入力欄に文字を入れてから、置きたい場所をクリックします。</li>
+          <li><span class="tool-name">Rectangle, Circle, Arrow, Line</span>Press the button, then drag on the image to draw.</li>
+          <li><span class="tool-name">Text</span>Press the button, type your text in the box, then click where you want to place it.</li>
         </ul>
-        <p>色・太さ・文字の大きさは、ボタンの下にある欄で変更できます。</p>
+        <p>Color, thickness, and text size can all be changed in the row below the buttons.</p>
         <div class="callout">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"></path></svg>
-          <span>描いたものを後から動かしたり大きさを変えたりしたい時は、動かしたいものを直接クリックしてください。選択後はドラッグで移動、周りのハンドルをドラッグして大きさを変えられます。よく使う文字は<span class="btn">＋登録</span>で保存しておくと、次からは選ぶだけで使えます。</span>
+          <span>To move or resize something you drew, click directly on it to select it. Once selected, drag to move it, or drag the handles around it to resize it. Save frequently used text with <span class="btn">+ Add</span> so you can just pick it next time instead of retyping it.</span>
         </div>
       </section>
 
       <section class="step" id="s3">
-        <div class="step-head"><span class="step-num">3</span><h2>トリミングについて</h2></div>
-        <p>画像の余分な部分を取り除きたい時に使います。「トリミング」タブを開いて使います。</p>
+        <div class="step-head"><span class="step-num">3</span><h2>Crop</h2></div>
+        <p>Use this when you want to remove extra parts of the image. Open the "Crop" tab to use it.</p>
         <ul>
-          <li><strong>Crop</strong> — 残したい部分をドラッグで選ぶと、それ以外の部分が切り取られます。</li>
-          <li><strong>縦を消す(左右をつなぐ)/ 横を消す(上下をつなぐ)</strong> — 画像の中の帯状の部分だけを取り除いて、残りをつなぎ合わせます。長い画面をスクロールして撮ったけれど、途中の余分な部分だけ消したい、という時に便利です。</li>
+          <li><strong>Crop</strong> — Drag to select the part you want to keep; everything outside it is cropped away.</li>
+          <li><strong>Remove Vertical Band (Join Left and Right) / Remove Horizontal Band (Join Top and Bottom)</strong> — Removes only a band-shaped part of the image and joins the rest back together. Handy when you captured a long scrolled screen but only need to remove an unwanted section in the middle.</li>
         </ul>
       </section>
 
       <section class="step" id="s4">
-        <div class="step-head"><span class="step-num">4</span><h2>テキスト化について</h2></div>
-        <p>写真の中の文字を、コピーできる文字に変換できます。「テキスト化」タブを開いただけでは読み取られず、「テキスト化：オフ」と書かれた四角いバッジをクリックする(「テキスト化：オン」に変わります)と読み取られます。読み取った文字は、そのままコピーしたり画像と一緒に保存したりできます。</p>
+        <div class="step-head"><span class="step-num">4</span><h2>Scan Text</h2></div>
+        <p>Turns text inside a photo into text you can copy. Just opening the "Scan Text" tab does not scan it — click the badge labeled "Scan Text: Off" (it changes to "Scan Text: On") to recognize the text. Recognized text can be copied on its own or saved together with the image.</p>
         <div class="callout">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"></rect><rect x="13" y="4" width="7" height="7" rx="1"></rect><rect x="4" y="13" width="7" height="7" rx="1"></rect></svg>
-          <span>画像の中にQRコードが写っている場合は自動で見つかります。中身がインターネットのアドレス(URL)だった場合、<strong>もう一度クリックすると初めてブラウザで開きます</strong>(誤って開いてしまわないようにするためです)。</span>
+          <span>If a QR code appears in the image, it's found automatically. If its contents are a web address (URL), <strong>you need to click it a second time before it opens in your browser</strong> (this is to prevent accidentally opening it).</span>
         </div>
       </section>
 
       <section class="step" id="s5">
-        <div class="step-head"><span class="step-num">5</span><h2>テキスト化(マスク)</h2></div>
-        <p>メールアドレスや名前など、他の人に見せたくない部分を黒く塗りつぶして隠したい時に使います。こちらも「テキスト化」タブの中の機能です。</p>
+        <div class="step-head"><span class="step-num">5</span><h2>Scan Text (Mask)</h2></div>
+        <p>Use this when you want to black out and hide something you don't want others to see, like an email address or a name. This is also part of the "Scan Text" tab.</p>
         <ol>
-          <li>「テキスト化：オフ」と書かれた四角いバッジをクリックする(「テキスト化：オン」に変わります)。</li>
-          <li>画像の中の文字が自動で四角い枠で囲まれる。</li>
-          <li>隠したい文字の枠をクリックすると、その部分が黒く塗りつぶされる。</li>
-          <li>枠になっていない部分も、マウスでドラッグすれば自由に塗りつぶせる。</li>
+          <li>Click the badge labeled "Scan Text: Off" (it changes to "Scan Text: On").</li>
+          <li>Text in the image is automatically surrounded by boxes.</li>
+          <li>Click the box around text you want to hide, and that area is blacked out.</li>
+          <li>You can also freely black out areas that aren't boxed by dragging over them with the mouse.</li>
         </ol>
       </section>
 
       <section class="step" id="s6">
-        <div class="step-head"><span class="step-num">6</span><h2>保存・コピーについて</h2></div>
+        <div class="step-head"><span class="step-num">6</span><h2>Saving and Copying</h2></div>
         <ul>
-          <li><strong>保存したい時</strong> — 画面上部の「保存先を指定」で場所を選び、<span class="btn">保存</span>ボタンを押します。</li>
-          <li><strong>どこかに貼り付けたい(コピーしたい)時</strong> — プレビュー上部のコピーボタンを押すか、<kbd>Ctrl</kbd>+<kbd>C</kbd>を押します。</li>
+          <li><strong>To save</strong> — Choose a location in "Save Folder" at the top of the screen, then press the <span class="btn">Save</span> button.</li>
+          <li><strong>To paste somewhere (copy)</strong> — Press the copy button above the preview, or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.</li>
         </ul>
-        <p>「画像だけ」「文字だけ」「両方」のどれを保存・コピーするかも選べます。</p>
+        <p>You can also choose whether to save or copy "image only," "text only," or "both."</p>
       </section>
 
       <section class="step" id="s7">
-        <div class="step-head"><span class="step-num">7</span><h2>履歴について</h2></div>
-        <p>「履歴」タブでは、これまでに撮影・編集したものを一覧で見られます。撮った直後の「元データ」と、マスクや文字を書き足した後の「編集済み」の、両方が残っています。</p>
+        <div class="step-head"><span class="step-num">7</span><h2>History</h2></div>
+        <p>The "History" tab lists everything you've captured and edited so far. Both the "original" right after capture and the "edited" version (with masks and markup added) are kept.</p>
       </section>
 
       <section class="step" id="s8">
-        <div class="step-head"><span class="step-num">8</span><h2>設定について</h2></div>
-        <p>「設定」タブでは、次のようなことができます。</p>
+        <div class="step-head"><span class="step-num">8</span><h2>Settings</h2></div>
+        <p>The "Settings" tab lets you do the following:</p>
         <ul>
-          <li><strong>データの保存先</strong> — アプリが内部で使う保存場所。分からなくなったら「既定に戻す」で元に戻せます。</li>
-          <li><strong>言語 / Language</strong> — 日本語と英語の切り替え。切り替えると再起動の確認が出ます。</li>
-          <li><strong>常駐</strong> — ウィンドウを閉じても通知領域(タスクトレイ)にアプリが残るようにするかどうか。オンにしておくと、閉じていてもショートカットキーで撮影できます。</li>
-          <li><strong>確認ダイアログ</strong> — 「すべて解除」のような元に戻しにくい操作の前に確認を出すかどうか。</li>
-          <li>利用規約・プライバシーポリシー・クレジット(使用しているソフトの一覧)も、この画面から確認できます。</li>
+          <li><strong>Data save location</strong> — Where the app stores its internal data. If you lose track of it, "Reset to Default" restores it.</li>
+          <li><strong>Language</strong> — Switch between Japanese and English. Switching will prompt you to restart.</li>
+          <li><strong>Background</strong> — Whether the app stays in the notification area (system tray) when you close the window. When on, you can still capture with the shortcut keys even while closed.</li>
+          <li><strong>Confirmation dialogs</strong> — Whether to show a confirmation before hard-to-undo actions like "Clear All."</li>
+          <li>The Terms of Use, Privacy Policy, and Credits (a list of the software this app uses) can also be checked from this screen.</li>
         </ul>
       </section>
 
       <section class="step" id="s9">
-        <div class="step-head"><span class="step-num">9</span><h2>よくある質問(FAQ)</h2></div>
-        <p><strong>Q. ウィンドウを切り替えたときなどに、画面に大きく「あ」や「A」と表示されたり、日本語入力と半角入力が勝手に切り替わったりします。ScreenReadyの不具合ですか?</strong></p>
-        <p>A. いいえ、ScreenReady自体の不具合ではありません。これはWindows自体の仕様で、ScreenReadyに限らず、ブラウザなど他のアプリでもウィンドウを最小化して元に戻したり、他のアプリへ切り替えたりするだけで同じことが起こります。</p>
-        <p>ScreenReadyのプログラム側で確実に防ぐことは難しいため、対処方法としては次のいずれかになります。</p>
+        <div class="step-head"><span class="step-num">9</span><h2>FAQ</h2></div>
+        <p><strong>Q. When I switch windows, a large "あ" or "A" briefly appears on screen, and my typing switches between Japanese and half-width input on its own. Is this a ScreenReady bug?</strong></p>
+        <p>A. No, this is not a bug in ScreenReady itself. This is a general behavior of Windows, and it can happen with other apps too — not just ScreenReady — simply by minimizing and restoring a window, or switching to another app.</p>
+        <p>Because ScreenReady's own program cannot reliably prevent this, here are the available workarounds.</p>
         <ul>
-          <li>Windowsの言語設定を開き、この表示(通知)自体を非表示に設定してください。(表示に関する設定項目は、OSやバージョンによってお使いの環境ごとに異なりますので、表示されている設定内容に応じて対応してください。)</li>
-          <li>「あ」「A」の表示が消えるまで少し待ってから操作してください。</li>
+          <li>Open Windows' language settings and turn off this notification display. (The exact setting differs depending on your OS version and environment, so please adjust it according to what's available on your system.)</li>
+          <li>Wait a moment for the "あ"/"A" indicator to disappear before typing.</li>
         </ul>
       </section>
 
     </main>
   </div>
 
-  <footer>ScreenReady 取扱説明書 · 対象バージョン 0.2.2</footer>
+  <footer>ScreenReady User Guide · Version 0.2.2</footer>
 
 </div>
