@@ -415,6 +415,27 @@
     font-size: 0.82rem;
     margin-top: 36px;
   }
+
+  .guide-figure {
+    margin: 18px 0 20px;
+  }
+
+  .guide-figure img {
+    display: block;
+    width: 100%;
+    max-width: 709px;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  .guide-figure figcaption {
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
 </style>
 
 <div class="shell">
@@ -431,8 +452,8 @@
       <span class="kicker">SCREENREADY GUIDE</span>
       <h1>User Guide</h1>
     </div>
-    <span class="version-chip">Version 0.2.2</span>
-    <a class="version-chip" href=".." style="text-decoration:none;">日本語</a>
+    <span class="version-chip">Version 0.2.3</span>
+    <a class="version-chip" href="../index.html" style="text-decoration:none;">日本語</a>
   </header>
 
   <div class="intro">
@@ -444,8 +465,8 @@
     <div class="privacy-note">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
       <div>
-        <strong>Your captures never leave this PC</strong>
-        <p>Captured images and recognized text are processed entirely on this computer and are never sent over the internet. You can use it with confidence.</p>
+        <strong>Image processing is local by default</strong>
+        <p>Capture, editing, OCR, QR reading, history, and saving are processed on this PC, and images or OCR results are not sent automatically to the publisher. Web Capture, web links, and Gmail drafts connect through your browser only when you choose those actions.</p>
       </div>
     </div>
   </div>
@@ -457,10 +478,12 @@
       <a href="#s3">3. Crop</a>
       <a href="#s4">4. Scan Text</a>
       <a href="#s5">5. Scan Text (Mask)</a>
-      <a href="#s6">6. Saving and Copying</a>
-      <a href="#s7">7. History</a>
-      <a href="#s8">8. Settings</a>
-      <a href="#s9">9. FAQ</a>
+      <a href="#s6">6. Web Capture</a>
+      <a href="#s7">7. Saving and Copying</a>
+      <a href="#s8">8. History</a>
+      <a href="#s9">9. Settings</a>
+      <a href="#s10">10. Report a Problem or Suggestion</a>
+      <a href="#s11">11. FAQ</a>
     </nav>
 
     <main>
@@ -478,6 +501,7 @@
           <span class="shortcut-chip"><span class="label">All Displays</span><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></span>
         </div>
         <p>Once captured, the image automatically appears in the preview in the middle of the screen.</p>
+        <p>Use the mouse wheel to zoom the preview. While zoomed in, hold <kbd>Space</kbd> and drag with the left mouse button to pan the image.</p>
         <div class="callout">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><circle cx="12" cy="16" r="0.5" fill="currentColor"></circle></svg>
           <span><strong>If you just want to capture and copy right away</strong> — use "Quick Mode" in the top right. It skips the editing screen and lets you capture and copy with one click from a small always-on-top panel, with optional auto-save to a folder you choose.</span>
@@ -494,7 +518,7 @@
         <p>Color, thickness, and text size can all be changed in the row below the buttons.</p>
         <div class="callout">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"></path></svg>
-          <span>To move or resize something you drew, click directly on it to select it. Once selected, drag to move it, or drag the handles around it to resize it. Save frequently used text with <span class="btn">+ Add</span> so you can just pick it next time instead of retyping it.</span>
+          <span>Click an item to move, resize, rotate, or delete it. Multiple selection is also supported. Save frequently used text with <span class="btn">+ Add</span>. Undo and Redo follow operations in order across tabs and across the crop boundary.</span>
         </div>
       </section>
 
@@ -528,33 +552,62 @@
       </section>
 
       <section class="step" id="s6">
-        <div class="step-head"><span class="step-num">6</span><h2>Saving and Copying</h2></div>
+        <div class="step-head"><span class="step-num">6</span><h2>Web Capture</h2></div>
+        <p>Capture an open Chrome or Edge page, including content that extends vertically beyond the visible area.</p>
+        <ol>
+          <li>Select "Detect Pages" to open the browser's remote debugging settings.</li>
+          <li>
+            Turn on <strong>Allow remote debugging for this browser instance</strong>.
+            <figure class="guide-figure">
+              <img src="../assets/web-capture-remote-debugging.png" alt="Remote debugging settings with Allow remote debugging for this browser instance turned on" loading="lazy">
+              <figcaption>Where to turn on remote debugging. The wording and layout may differ slightly depending on your browser version.</figcaption>
+            </figure>
+          </li>
+          <li>Return to ScreenReady and choose the target under "Page to Capture."</li>
+          <li>If the browser is minimized, approve restoring it. If another tab is visible, ScreenReady switches to the selected tab.</li>
+          <li>Select "Capture" and wait until the progress message closes and the image appears in the preview.</li>
+        </ol>
+        <div class="callout">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><circle cx="12" cy="16" r="0.5" fill="currentColor"></circle></svg>
+          <span>Using "Preload" may cause the target browser to fetch additional images or other resources from the website. Some site structures or loading methods can still cause capture failure, early stopping, duplication, or missing content.</span>
+        </div>
+      </section>
+
+      <section class="step" id="s7">
+        <div class="step-head"><span class="step-num">7</span><h2>Saving and Copying</h2></div>
         <ul>
-          <li><strong>To save</strong> — Choose a location in "Save Folder" at the top of the screen, then press the <span class="btn">Save</span> button.</li>
+          <li><strong>To save</strong> — Check the save location at the top of the screen, then press <span class="btn">Save</span>. On first use, it matches the Data Save Location in Settings and can be changed later.</li>
           <li><strong>To paste somewhere (copy)</strong> — Press the copy button above the preview, or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.</li>
         </ul>
         <p>You can also choose whether to save or copy "image only," "text only," or "both."</p>
       </section>
 
-      <section class="step" id="s7">
-        <div class="step-head"><span class="step-num">7</span><h2>History</h2></div>
+      <section class="step" id="s8">
+        <div class="step-head"><span class="step-num">8</span><h2>History</h2></div>
         <p>The "History" tab lists everything you've captured and edited so far. Both the "original" right after capture and the "edited" version (with masks and markup added) are kept.</p>
       </section>
 
-      <section class="step" id="s8">
-        <div class="step-head"><span class="step-num">8</span><h2>Settings</h2></div>
+      <section class="step" id="s9">
+        <div class="step-head"><span class="step-num">9</span><h2>Settings</h2></div>
         <p>The "Settings" tab lets you do the following:</p>
         <ul>
           <li><strong>Data save location</strong> — Where the app stores its internal data. If you lose track of it, "Reset to Default" restores it.</li>
           <li><strong>Language</strong> — Switch between Japanese and English. Switching will prompt you to restart.</li>
           <li><strong>Background</strong> — Whether the app stays in the notification area (system tray) when you close the window. When on, you can still capture with the shortcut keys even while closed.</li>
           <li><strong>Confirmation dialogs</strong> — Whether to show a confirmation before hard-to-undo actions like "Clear All."</li>
+          <li><strong>Support</strong> — Open the User Guide, report a problem or suggestion, or report an OCR result.</li>
           <li>The Terms of Use, Privacy Policy, and Credits (a list of the software this app uses) can also be checked from this screen.</li>
         </ul>
       </section>
 
-      <section class="step" id="s9">
-        <div class="step-head"><span class="step-num">9</span><h2>FAQ</h2></div>
+      <section class="step" id="s10">
+        <div class="step-head"><span class="step-num">10</span><h2>Report a Problem or Suggestion</h2></div>
+        <p>Open a general report or OCR report from Support in Settings. After reviewing the included data and selecting consent, choose "Open Draft in Gmail." Gmail opens with the recipient, subject, and message filled in, and the report data is copied to the clipboard.</p>
+        <p>Paste it into the Gmail message, review the content and recipient, and send it yourself. ScreenReady does not sign in, attach images, or send email automatically.</p>
+      </section>
+
+      <section class="step" id="s11">
+        <div class="step-head"><span class="step-num">11</span><h2>FAQ</h2></div>
         <p><strong>Q. When I switch windows, a large "あ" or "A" briefly appears on screen, and my typing switches between Japanese and half-width input on its own. Is this a ScreenReady bug?</strong></p>
         <p>A. No, this is not a bug in ScreenReady itself. This is a general behavior of Windows, and it can happen with other apps too — not just ScreenReady — simply by minimizing and restoring a window, or switching to another app.</p>
         <p>Because ScreenReady's own program cannot reliably prevent this, here are the available workarounds.</p>
@@ -567,6 +620,6 @@
     </main>
   </div>
 
-  <footer>ScreenReady User Guide · Version 0.2.2</footer>
+  <footer>ScreenReady User Guide · Version 0.2.3</footer>
 
 </div>
